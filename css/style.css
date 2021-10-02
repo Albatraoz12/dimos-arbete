@@ -70,11 +70,12 @@ header {
   grid-template-columns: repeat(2, 600px); 
   justify-content: center;
   justify-items: center; 
+  text-align: center;
   
 }
 
 .image{
-  display: inherit;
+  display: 100%;
 }
 
        /*** Header styling Ends  ***/
@@ -89,22 +90,19 @@ main {
   grid-template-columns: repeat(2, 600px);
   justify-content: center;
   justify-items: center;
-  text-align: left;
+  text-align: center;
   justify-content: space-around;
 
 }
 
 iframe{
   height: 400px;
-  width: 700px;
+  width: 100%;
   margin: 5px 0;
-  grid-template-rows: 2 / -1;
+  grid-template-rows: 2fr / -1fr;
 }
 
-/* article{
-  background-color: red;
-  grid-area: article;
-} */
+
 
       /*** Main styling Ends ***/
 
@@ -118,14 +116,12 @@ section{
   grid-template-rows: repeat(1, 100px);
   justify-content: center;
   justify-items: center;
-  
-  
-
 }
 
 .table-list{
   padding: 5px;
-  margin: 20px;
+  margin: 0 0 10px 0;
+  text-align: center;
 }
 
 
@@ -138,22 +134,22 @@ footer{
 
 
 
-
+/* @media only screen and (max-width) */
 
 
     
 
-      /* @media stlying */
+      /* @media stlying Mobil */
 
 
 
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 750px) {
 
    .container{
-     display: grid;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 2fr 1fr;
     grid-template-areas: 
     "nav"
     "header"
@@ -164,15 +160,10 @@ footer{
 
   nav{
     grid-area: nav;
-    
+    position: sticky;
+    top: 0px;
   }
   
-  .wrapper-nav{
-    position: sticky;
-    top: 0;
-  }
-
-
   header{
     grid-area: header;
     grid-template-columns: 1fr;
@@ -181,5 +172,16 @@ footer{
   main{
     grid-area: main;
     grid-template-columns: 1fr;
+    width: 100%;
   }
+
+  section{
+    grid-area: section;
+    grid-template-rows: 1fr;
+  }
+
+  /* h1,h2,h3,p{
+    text-align: left;
+  } */
+
 }

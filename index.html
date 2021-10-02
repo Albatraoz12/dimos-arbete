@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="description" content="Dimos first assignment">
+  <meta name="description">
+  <meta name="author" content="Dimosthenis Emmanouil" >
+  <meta name="keywords" content="HTML,CSS,Responsive"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
@@ -11,15 +14,12 @@
   
 
 <div class="container">
-  
   <nav>
-    <div class="wrapper-nav">
-      <ul>
-        <li><a href="#about">Home</a></li>
-        <li><a href="#home">About</a></li>
-        <li><a href="#table">Ranking</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#table">Ranking</a></li>
+    </ul>
   </nav>
 
   <header>
@@ -31,8 +31,8 @@
     </figure>
 
     <article class="intro-text">
-      <h1>Stockholms Bästa Kaffer</h1>
-      <p id="home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, maxime provident. Natus quas ab, doloribus optio consequatur voluptatum ipsam tenetur reiciendis praesentium et tempora impedit maiores amet, aliquid ratione omnis aperiam! Neque laborum mollitia tempora placeat nulla nostrum ea nesciunt assumenda perspiciatis quasi. Optio impedit nostrum ut necessitatibus saepe expedita pariatur quidem. Iusto sed totam, voluptas, nobis nam non dolor asperiores architecto consequuntur, vero tenetur. Ipsam quis voluptatem tempora obcaecati accusantium dolore quidem, vitae, laborum, numquam iure error ea aut maiores officia! Quisquam recusandae, vitae eligendi ullam dolores suscipit iste dolore, porro sed dignissimos dolorum mollitia animi</p>
+      <h1 id="home">Stockholms Bästa Kaffer</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, maxime provident. Natus quas ab, doloribus optio consequatur voluptatum ipsam tenetur reiciendis praesentium et tempora impedit maiores amet, aliquid ratione omnis aperiam! Neque laborum mollitia tempora placeat nulla nostrum ea nesciunt assumenda perspiciatis quasi. Optio impedit nostrum ut necessitatibus saepe expedita pariatur quidem. Iusto sed totam, voluptas, nobis nam non dolor asperiores architecto consequuntur, vero tenetur. Ipsam quis voluptatem tempora obcaecati accusantium dolore quidem, vitae, laborum, numquam iure error ea aut maiores officia! Quisquam recusandae, vitae eligendi ullam dolores suscipit iste dolore, porro sed dignissimos dolorum mollitia animi</p>
     </article>
       
   </header>
@@ -66,10 +66,24 @@
           <tr>
             <td>1</td>
             <td>Espresso House</td>
-            <td>Gallerian STO, Hamngatan 37</td>
+            <td>Hamngatan 37</td>
+            <td>***</td>          
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Star Bucks</td>
+            <td>Centralplan 15</td>
+            <td>*****</td>
+          </tr>
+            <td>3</td>
+            <td>Cafe Alberts</td>
+            <td>Birger Jarlsgatan 5</td>
             <td>***</td>
-            <td></td>
-            <td></td>
+          <tr>
+            <td>4</td>
+            <td>Cafe Krans</td>
+            <td>Västerlånggatan 26</td>
+            <td>***</td>
           </tr>
         </tbody>
 
@@ -82,6 +96,11 @@
     <footer>
       <p class="copyright">C Copyright 2021 Stockholms Kaffee
       </p>
+      <form action="/action_page.php">
+        <p>Sign upp to get a newsletter from me</p>
+        <input type="email" id="email" name="email" placeholder="email here">
+        <input type="submit" value="Submit">
+      </form>
     </footer>
 
 
