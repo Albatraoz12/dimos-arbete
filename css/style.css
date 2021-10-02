@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 
@@ -18,7 +19,7 @@
     "main main main main"
     "section section section section"
     "footer footer footer footer";
-  grid-gap: 5px;
+  grid-gap: 10px;
   font-family: 'Poppins', sans-serif;
   color: white;
   
@@ -36,7 +37,7 @@ nav{
 
 nav ul{
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(4, 150px);
   justify-content: center;
   justify-items: center;
   list-style: none;
@@ -67,7 +68,7 @@ header {
   background-color: hotpink;
   grid-area: header;
   display: grid;
-  grid-template-columns: repeat(2, 600px); 
+  grid-template-columns: repeat(2, 600px);
   justify-content: center;
   justify-items: center; 
   text-align: center;
@@ -75,7 +76,8 @@ header {
 }
 
 .image{
-  width: 100%;
+  margin: 10px 10px 0 0;
+  height: 100%;
 }
 
        /*** Header styling Ends  ***/
@@ -142,7 +144,7 @@ footer{
 
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
 
    .container{
     display: grid;
@@ -154,6 +156,8 @@ footer{
     "main"
     "section"
     "footer";
+    grid-gap: 10px;
+    font-size: 20px;
   }
 
   nav{
@@ -165,6 +169,8 @@ footer{
   header{
     grid-area: header;
     grid-template-columns: 1fr;
+    height: auto;
+    width: auto;
   }
   
   main{
