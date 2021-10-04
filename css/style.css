@@ -4,59 +4,75 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
+body{
+  scroll-behavior: smooth;
+  background-color: #FAF9F6;
+}
+
+h1,
+h2,
+h3{
+  background: linear-gradient(45deg, #a57233 ,#502c03);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+p{
+  color: black;
+}
 
 .container {
   display: grid;
-  height: 100vh; 
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.2fr 1.5fr 1.5fr 1fr 0.5fr;
+  height: 200vh;
+  width: 100%; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
   grid-template-areas:
-    "nav nav nav nav"
-    "header header header header"
-    "main main main main"
-    "section section section section"
-    "footer footer footer footer";
-  grid-gap: 10px;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  
+    "nav nav"
+    "header header"
+    "main main"
+    "section section"
+    "footer footer";
+  grid-gap: 70px;
+  font-family: 'Poppins', sanrs-serif;
+  font-size: 15px;
 }
+
+
 
 
       /** Navigation style starts **/
 
 
 nav{
-  background-color: Black;
   grid-area: nav;
-  
 }
 
 nav ul{
+  background-color: #a57233;
   display: grid;
   grid-template-columns: repeat(4, 150px);
   justify-content: center;
   justify-items: center;
   list-style: none;
-  margin: 7px 100px;
+  margin-bottom: 7px;
+  padding: 10px;
 }
 
 nav ul li{
   border: 2px solid white;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 nav ul li a{
   text-decoration: none;
   padding: 5px;
-  color: white;   
+  color: white;  
 }
 
 nav ul li a:hover{
-  color: blue;
+  color: black;
 }
 
       /*** Navigions style Ends ***/
@@ -65,19 +81,18 @@ nav ul li a:hover{
       /** Header styling starts  **/
 
 header {
-  background-color: hotpink;
   grid-area: header;
   display: grid;
   grid-template-columns: repeat(2, 600px);
-  justify-content: center;
+  justify-content: space-around;
   justify-items: center; 
-  text-align: center;
-  
+  text-align: center; 
 }
 
-.image{
-  margin: 10px 10px 0 0;
-  height: 100%;
+img{
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
 }
 
        /*** Header styling Ends  ***/
@@ -86,58 +101,66 @@ header {
       /** Main styling starts **/
 
 main {
-  background-color: green;
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(2, 600px);
-  justify-content: center;
+  justify-content: space-around;
   justify-items: center;
   text-align: center;
-  justify-content: space-around;
-
 }
 
 iframe{
   height: 400px;
-  width: 100%;
-  margin: 5px 0;
-  /* grid-template-rows: 2 / -1; */
+  width: 90%;
+  margin-top: 5px;
 }
-
-
 
       /*** Main styling Ends ***/
 
       /*** Table Style Stars ***/
 
 section{
-  background-color: yellow;
   color: black;
   grid-area: section;
   display: grid;
-  grid-template-rows: repeat(1, 100px);
+  grid-template-rows: repeat(2, 100px);
   justify-content: center;
   justify-items: center;
 }
 
-.table-list{
-  padding: 5px;
-  margin: 0 0 10px 0;
-  text-align: center;
+table{
+  /* border: 1px solid black; */
+  
+}
+
+th,td{
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  
+}
+
+tfoot{
+  background-color: rgb(20, 97, 20);
+  color: white;
 }
 
 
       /*** Table Style Ends ***/
 
 footer{
-  background-color: blue;
+  background-color: #a57233;
   grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(2, 0.2fr);
+  justify-content: left;
+  padding: 30px;
 }
 
+footer > p{
+  color: white;
+}
 
-
-
-    
 
       /* @media stlying Mobil */
 
@@ -148,16 +171,21 @@ footer{
 
    .container{
     display: grid;
+    height: 200vh;
+    width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
     grid-template-areas: 
     "nav"
     "header"
     "main"
     "section"
     "footer";
-    grid-gap: 10px;
+    grid-gap: 30px;
     font-size: 20px;
+  
+ 
+  
   }
 
   nav{
@@ -169,10 +197,13 @@ footer{
   header{
     grid-area: header;
     grid-template-columns: 1fr;
-    height: auto;
-    width: auto;
+    /* width: 80%; */
   }
   
+  article{
+    padding: 0 40px;
+  }
+
   main{
     grid-area: main;
     grid-template-columns: 1fr;
@@ -184,8 +215,10 @@ footer{
     grid-template-rows: 1fr;
   }
 
-  /* h1,h2,h3,p{
-    text-align: left;
-  } */
+  footer{
+    grid-area: footer;
+    grid-template-columns: 1fr;
+    justify-content: left;
+  }
 
 }
